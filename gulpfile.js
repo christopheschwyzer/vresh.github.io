@@ -180,5 +180,5 @@ gulp.task('default', () => {
 
 gulp.task('deploy', ['default'], () => {
   return gulp.src('dist/**/*')
-    .pipe($.ghPages());
+    .pipe($.ghPages({remoteUrl: 'git@github.com:vrenetic/vresh.github.io.git', origin: 'upstream'}));
 });
