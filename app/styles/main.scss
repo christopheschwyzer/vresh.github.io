@@ -1,0 +1,59 @@
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+
+$colorFg: lighten(black, 10);
+$colorBlue: #00B3E3;
+
+$breakpointSmall: 400px;
+
+body {
+  color: $colorFg;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+
+  .logo {
+    width: 60vw;
+    max-width: 100%;
+
+    @media screen and (min-width: $breakpointSmall) {
+      width: 400px;
+    }
+  }
+
+  .more {
+    bottom: 30px;
+    left: 50%;
+    opacity: .1;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+.main {
+  align-items: center;
+  background-color: $colorBlue;
+  display: flex;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 5vw;
+  text-align: center;
+}
+
+.footer {
+  padding: 5vw;
+  text-align: center;
+}
